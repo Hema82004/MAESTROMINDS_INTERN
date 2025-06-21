@@ -1,0 +1,297 @@
+.register-container {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  background: rgba(255, 255, 255, 0.75);       /* Soft white with slight transparency */
+  backdrop-filter: blur(8px);                  /* Blur background behind the box */
+  padding: 1.5rem 1.5rem;                      /* Uniform padding */
+  border-radius: 12px;                         /* Rounded corners */
+  width: 90%;
+  max-width: 400px;                            /* Smaller max width for compact form */
+  max-height: 85vh;                            /* Limits height to fit viewport */
+  overflow-y: auto;                            /* Scroll if content exceeds height */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);   /* Softer, larger shadow for depth */
+  border: 1px solid #0f0c0c;                   /* Subtle border for definition */
+  color: #333;                                 /* Text color */
+  text-align: left;                          /* Centered text alignment */
+  position: relative;                          /* Relative for internal positioning if needed */
+}
+
+
+.form-header {
+  position: relative;
+
+  text-align: center; /* This centers the heading text */
+  margin-bottom: 30px;
+}
+.form-header img {
+  margin-right: 40px;    /* Extra space between logo and text */
+}
+
+.form-logo-small {
+  position: absolute;
+  top: 16px;         /* Closer to the top */
+  left: 0px;        /* Closer to the left */
+  width: 40px;
+  height: auto;
+}
+
+
+.form-title {
+  font-size: 26px;
+  margin: 0;
+  color: #333;
+}
+
+
+.form-box input[type="text"],
+.form-box input[type="number"],
+.form-box input[type="email"],
+.form-box input[type="password"],
+.form-box input[type="tel"],
+.form-box select {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 18px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  color: #333;
+  font-size: 1rem;
+}
+
+.form-box select {
+  background-color: transparent;
+  color: #333;
+}
+
+.form-box input[type="file"] {
+  display: block;
+  margin-bottom: 18px;
+  color: #333;
+}
+
+.form-box input:focus,
+.form-box select:focus {
+  outline: none;
+  border-bottom-color: #d2a679; /* Accent color for focus */
+}
+
+.form-box input::placeholder {
+  color: #777;
+}
+
+.form-box label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-box button {
+  background-color: #d2a679;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.form-box button:hover {
+  background-color: #b8835c;
+}
+
+.form-box h3,
+.form-box p {
+  text-align: center;
+  color: #333;
+}
+
+.form-box .otp-section {
+  text-align: center;
+}
+
+.form-box .otp-section button {
+  margin-top: 8px;
+  background-color: #28a745;
+  border-radius: 5px;
+}
+
+.form-box .resend-otp-button:hover {
+  background-color: #1e7e34;
+}
+
+.form-box input[type="file"]::-webkit-file-upload-button {
+  background: #d2a679;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.form-box input[type="file"]::-moz-file-upload-button {
+  background: #d2a679;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.eye-icon.hide::after {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 2px;
+  background-color: #555;
+  top: 50%;
+  left: -5%;
+  transform: rotate(-20deg);
+}
+
+
+.register-btn,
+.verify-otp-btn,
+.resend-otp-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.register-btn { background-color: #d2a679; }
+.register-btn:hover { background-color: #d2a679; }
+
+.verify-otp-btn { background-color: #d2a679; }
+.verify-otp-btn:hover { background-color: #d2a679; }
+
+.resend-otp-btn { background-color: #ffc107; color: #000; }
+.resend-otp-btn:hover { background-color: #e0a800; }
+.input-container {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-with-icon {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+  width: 100%;
+  padding: 10px 40px 10px 10px; /* icon space on right */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.input-with-icon .input-icon {
+  position: absolute;
+  right: 10px;  /* 👈 icon on right */
+  top: 50%;
+  transform: translateY(-50%);
+  color: grey;  /* grey color */
+  font-size: 16px;
+}
+
+
+
+.input-with-icon select {
+  appearance: none;
+  background-color: #fff;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 500;
+}
+
+.register-btn {
+  width: 100%;
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.register-btn:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+/* Remove number input spinners in Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  width: 100%;
+  padding: 10px 35px 10px 40px; /* left padding for icon */
+  border: none;
+  border-bottom: 1px solid grey;
+  background: transparent;
+  color: #333;
+  font-size: 1rem;
+  outline: none;
+  position: relative;
+}
+
+select:focus {
+  border-color: #555;
+}
+
+/* Optional: style the dropdown arrow */
+select::-ms-expand {
+  display: none;
+}
+.input-with-icon select {
+  appearance: none;
+  background-color: transparent;     /* Transparent to match input fields */
+  border: none;
+  border-bottom: 2px solid #ccc;     /* Underline like other inputs */
+  padding: 10px 40px 10px 1px;      /* Icon on right */
+  font-size: 1rem;
+  color: #888;
+}
+
+.input-with-icon select:focus {
+  border-bottom-color: #d2a679;      /* Accent color on focus */
+}
+
+
